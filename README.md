@@ -21,7 +21,7 @@ A production-ready FastAPI app for system and HTTP metrics observability with Pr
 
 **Instructions:**
 ```bash
-git clone <repo>
+git clone https://github.com/ratulkhan44/FastAPI_metrics_monitoring_system.git
 cd FastAPI_metrics_monitoring_system
 docker compose up --build
 
