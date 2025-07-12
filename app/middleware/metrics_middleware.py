@@ -7,7 +7,6 @@ from ..metrics.http_metrics import (
     HTTP_REQUESTS_SIZE_BYTES, HTTP_RESPONSES_SIZE_BYTES
 )
 
-import asyncio
 
 class MetricsMiddleware(BaseHTTPMiddleware):
     async def dispatch(self, request: Request, call_next):

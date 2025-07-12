@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from prometheus_client import make_asgi_app
-from .routers import health
+from .routers import health,base
 from .middleware.metrics_middleware import MetricsMiddleware
 from .metrics.system_metrics import start_system_metric_collector
 
@@ -10,6 +10,7 @@ app = FastAPI(
 )
 
 # Include routers
+app.include_router(base.router, tags=["Base_route"])
 app.include_router(health.router, tags=["Health"])
 
 # Add Prometheus custom middleware
